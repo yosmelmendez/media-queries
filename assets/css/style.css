@@ -1,0 +1,250 @@
+* {
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+.inicio {
+  grid-area: inicio;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.inicio img {
+  padding: 1rem;
+}
+.search {
+  grid-area: search;
+  background-color: #ecebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-left: 2rem;
+}
+.search h4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.search p {
+  padding-bottom: 0.5rem;
+}
+
+.pie {
+  grid-area: pie;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pie i {
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.grilla img {
+  width: 100%;
+  height: 100%;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1rem;
+  padding-top: 10px;
+}
+.producto h2 {
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+.producto p {
+  padding-bottom: 2rem;
+}
+.producto img {
+  width: 90%;
+  height: 50%;
+  object-fit: contain;
+}
+#filtro {
+  width: 100%;
+  padding: 16px;
+  border-color: white;
+  border-radius: 4px;
+  background-color: white;
+}
+.buton {
+  background-color: rgb(173, 171, 171);
+  color: white;
+  width: 80%;
+  height: 10%;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: medium;
+}
+.buton:hover {
+  background-color: black;
+  color: white;
+  transition: 0.5s;
+}
+
+.opciones {
+  padding: 0.5rem;
+}
+
+.opciones:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.zoom:hover {
+  transform: scale(1.2);
+  transition: 0.7s;
+  cursor: pointer;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search input[type="text"] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+  width: 90%;
+}
+
+@media (max-width: 575px) {
+  .grid-container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 7fr 1fr;
+    grid-template-areas:
+      "inicio"
+      "search"
+      "principal"
+      "pie";
+    height: 100vh;
+  }
+  .grilla {
+    grid-area: principal;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding-bottom: 0.5rem;
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+
+  .opciones {
+    display: none;
+  }
+  .inicio {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .inicio i {
+    padding: 1rem;
+  }
+  .search {
+    padding: 1rem;
+  }
+  .pie {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 7.5fr 0.5fr;
+    grid-template-areas:
+      "inicio search "
+      "inicio principal"
+      "inicio principal"
+      "pie principal ";
+    height: 100vh;
+  }
+  .inicio i {
+    display: none;
+  }
+  .grilla {
+    grid-area: principal;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 0.5rem;
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+  .grilla {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .pie {
+    grid-area: pie;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+}
+@media (min-width: 992px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 7.5fr 0.5fr;
+    grid-template-areas:
+      "inicio search "
+      "inicio principal"
+      "inicio principal"
+      "pie principal ";
+    height: 100vh;
+  }
+  .inicio i {
+    display: none;
+  }
+  .pie {
+    grid-area: pie;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .grilla {
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .grilla {
+    grid-area: principal;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding-bottom: 0.5rem;
+    padding-left: 10px;
+    padding-right: 30px;
+  }
+}
